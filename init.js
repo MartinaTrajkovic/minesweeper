@@ -1,7 +1,6 @@
 const inputs = document.querySelectorAll("input")
 const buttonsAsInput = document.querySelectorAll(".buttonFiles")
 const gameTable = document.querySelector("#gameTable");
-
 buttonsAsInput.forEach(button=>{
     button.addEventListener("click", function(){
         document.querySelector(`#${this.id}Img`).click()
@@ -21,7 +20,6 @@ function setIcon(){
 function defaultIcons(){
     localStorage.setItem("flagImg","svg/flag.svg")
     localStorage.setItem("bombImg","svg/bomb.svg")
-
 }
 function gameStart(){
     if(!localStorage.getItem("bombImg") || !localStorage.getItem("flagImg")){
@@ -44,12 +42,10 @@ function gameStart(){
         case "medium":
                 createTable(16,16,40)
                 setSize(gameTable,"90vh","90vh")
-
-            break;
-      case "hard":
-            createTable(16,30,99)
-            setSize(gameTable,"90vh","160vh")
-
+                break;
+        case "hard":
+                createTable(16,30,99)
+                setSize(gameTable,"90vh","160vh")
     }
 }
 let levelsArray = document.querySelectorAll(".gameLevel")
@@ -91,9 +87,7 @@ function showPopup(message,action){
         actionButton.addEventListener("click", function () {
             localStorage.removeItem("level")
             location.reload()
-
         })
-
     }
 }
 function closePopupWindow(parent) {
