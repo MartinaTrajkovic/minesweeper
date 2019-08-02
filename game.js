@@ -5,7 +5,6 @@ function Cell(coords) {
 const cellsArray = [];
 let flagCount = 0
 let revealedCount
-
 function createTable(row, col, numberOfBombs) {
     gameTable.style.gridTemplateRows = `repeat(${row},1fr)`;
     gameTable.style.gridTemplateColumns = `repeat(${col},1fr)`;
@@ -22,7 +21,6 @@ function createTable(row, col, numberOfBombs) {
     }
     neighbours(row, col);
     reveal(row, col, numberOfBombs)
-    
 }
 function coordinates(row, col) {
     const coordsArray = [];
@@ -33,7 +31,6 @@ function coordinates(row, col) {
     }
     return coordsArray;
 }
-
 function bombs(coordsArray, numberOfBombs) {
     const arrayOfBombs = [];
     while (arrayOfBombs.length < numberOfBombs) {
@@ -82,7 +79,6 @@ function reveal(row, col, numberOfBombs) {
                 setTimeout(function(){
                     showPopup("GAME OVER","reset")
                 },1000)
-
             }
             else {
 
@@ -101,7 +97,6 @@ function reveal(row, col, numberOfBombs) {
             if(cellsArray[k].revealed){
                 revealedCount++
                 checkIfWon(numberOfBombs,row,col)
-
             }
         }
         })
@@ -118,11 +113,8 @@ function reveal(row, col, numberOfBombs) {
                 cellsArray[i].flag = false
                 flagCount--
             }
-
             checkIfWon(numberOfBombs,row,col)
         })
-
-
     }
 }
 function revealIfZero(x, y, row, col, gameContainer) {
@@ -139,7 +131,6 @@ function revealIfZero(x, y, row, col, gameContainer) {
                     cellZero.revealed = true;
                     gameContainer[index].innerHTML = cellZero.value
                     gameContainer[index].style.pointerEvents = "none"
-                    
                 }
                 if (!cellZero.revealed && cellZero.value === 0 && !cellsArray[index].flag) {
                     cellZero.revealed = true;
@@ -149,14 +140,10 @@ function revealIfZero(x, y, row, col, gameContainer) {
                     gameContainer[index].style.pointerEvents = "none"
                     revealIfZero(parseInt(c[0]), parseInt(c[1]), row, col, gameContainer)
                 }
-
             }
-
         }
     }
-
 }
-
 function gameOver(parent) {
     indexOfBombs = bombIndexes()
     for (let i = 0; i < indexOfBombs.length; i++) {
@@ -165,7 +152,6 @@ function gameOver(parent) {
     document.querySelector("#gameTable").style.pointerEvents = "none"
 }
 let revealed =0
-
 function bombIndexes() {
     const index = []
     for (let i = 0; i < cellsArray.length; i++) {
@@ -175,7 +161,6 @@ function bombIndexes() {
     }
     return index
 }
-
 function checkIfWon(numberOfBombs,row,col){
     if(flagCount == numberOfBombs && revealedCount == row*col-numberOfBombs){
         setTimeout(function(){
