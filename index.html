@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title flex-center" id="titleHeader">
+            <h1>MINESWEEPER</h1>
+        </div>
+        <div class="settings" id="settingsPage">
+            <div class="icons">
+                <div class="customIcons flex-center">
+                    <input type="file" name="" id="bombImg">
+                    <input type="file" name="" id="flagImg">
+
+                    <img id="bomb" class="buttonFiles" src="svg/chooseBomb.svg" />
+                    <img id="flag" class="buttonFiles" src="svg/chooseFlag.svg" />
+                </div>
+                <div class="separator flex-center">
+                    <hr>
+                    <span>OR</span>
+                    <hr>
+                </div>
+                <div class="flex-center">
+                    <img src="svg/ourIcons.svg" id="resetIcons" />
+                </div>
+            </div>
+            <div class="level">
+                <div class="separator flex-center">
+                    <hr>
+                    <span>CHOOSE DIFICULTY LEVEL</span>
+                    <hr>
+                </div>
+                <div class="levelWrapper">
+                    <img src="svg/easy.svg" class="gameLevel" id="easy" />
+                    <img src="svg/medium.svg" class="gameLevel" id="medium" />
+                    <img src="svg/hard.svg" class="gameLevel" id="hard" /></div>
+            </div>
+            <div class="start">
+                <img src="svg/startGame.svg" id="startGame">
+            </div>
+        </div>
+        <div class="game" id="gamePage">
+            <div id="gameTable"></div>
+
+        </div>
+    </div>
+    <div class="overlay" id="popup"></div>
+    <script src="init.js"></script>
+    <script src="game.js"></script>
+
+</body>
+
+</html>
