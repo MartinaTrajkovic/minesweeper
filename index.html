@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="svg/bomb.png" type="image" />
     <title>MINESWEEPER</title>
 </head>
-
 <body>
     <div class="container">
         <div class="title flex-center" id="titleHeader">
@@ -19,7 +18,6 @@
                 <div class="customIcons flex-center">
                     <input type="file" name="" id="bombImg">
                     <input type="file" name="" id="flagImg">
-
                     <img id="bomb" class="buttonFiles" src="svg/chooseBomb.svg" />
                     <img id="flag" class="buttonFiles" src="svg/chooseFlag.svg" />
                 </div>
@@ -49,13 +47,10 @@
         </div>
         <div class="game" id="gamePage">
             <div id="gameTable"></div>
-
         </div>
     </div>
     <div class="overlay" id="popup"></div>
     <script src="init.js"></script>
     <script src="game.js"></script>
-
 </body>
-
 </html>
