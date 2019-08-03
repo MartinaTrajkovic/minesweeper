@@ -60,7 +60,6 @@ levelsArray.forEach(level => level.addEventListener("click", chooseLevel))
 
 function chooseLevel() {
     localStorage.setItem("level", `${this.id}`)
-    console.log(levels)
     for (let i = 0; i < levels.length; i++) {
         levels[i].classList.remove("selectedLevel")
         this.classList.add("selectedLevel")
