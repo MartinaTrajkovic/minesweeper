@@ -38,7 +38,7 @@ function gameStart() {
         showPopup("Choose dificulty level", "close")
     } else {
         changeDisplay("settingsPage", "none")
-        changeDisplay("gamePage", "grid")
+        changeDisplay("gamePage", "flex")
         changeDisplay("titleHeader", "none")
     }
     switch (localStorage.getItem("level")) {
