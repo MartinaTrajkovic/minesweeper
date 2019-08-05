@@ -12,7 +12,9 @@ function createTable(row, col, numberOfBombs) {
     const bombsArray = bombs(coordsArray, numberOfBombs);
     for (let i = 0; i < row * col; i++) {
         const tableCell = document.createElement("div");
-        tableCell.classList.add("cell")
+        tableCell.classList.add("cell");
+        tableCell.style.height = 90 / row + "vh";
+        tableCell.style.width = 90 / row + "vh";
         gameTable.appendChild(tableCell);
         cellsArray.push(new Cell(coordsArray[i]));
         if (bombsArray.includes(coordsArray[i])) {
