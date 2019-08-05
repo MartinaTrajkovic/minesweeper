@@ -44,15 +44,12 @@ function gameStart() {
     switch (localStorage.getItem("level")) {
         case "easy":
             createTable(9, 9, 10)
-            setSize(gameTable, "80vh", "80vh")
             break;
         case "medium":
             createTable(16, 16, 40)
-            setSize(gameTable, "90vh", "90vh")
             break;
         case "hard":
             createTable(16, 30, 99)
-            setSize(gameTable, "90vh", "160vh")
     }
 }
 let levelsArray = document.querySelectorAll(".gameLevel")
@@ -76,12 +73,6 @@ document.querySelector("#startGame").addEventListener("click", gameStart)
 function changeDisplay(id, display) {
     document.querySelector(`#${id}`).style.display = display
 }
-
-function setSize(elem, h, w) {
-    elem.style.height = h;
-    elem.style.width = w
-}
-
 function showPopup(message, action) {
     const overlay = document.querySelector("#popup");
     changeDisplay("popup", "flex")
