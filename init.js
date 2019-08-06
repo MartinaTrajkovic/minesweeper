@@ -35,7 +35,7 @@ function gameStart() {
         localStorage.setItem("flagImg", "svg/flag.svg")
     }
     if (!localStorage.getItem("level")) {
-        showPopup("Choose dificulty level", "close")
+        showPopup("Choose difficulty level", "close")
     } else {
         changeDisplay("settingsPage", "none")
         changeDisplay("gamePage", "flex")
